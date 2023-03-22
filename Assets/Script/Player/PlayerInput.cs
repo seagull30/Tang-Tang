@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    private const string MoveAxisName = "Vertical";
-    private const string RotateAxisName = "Horizontal";
+    private const string VAxisName = "Vertical";
+    private const string HAxisName = "Horizontal";
 
-    public float MoveDirection { get; private set; }
-    public float RotateDirection { get; private set; }
+
+
+    public float VERTICAL_MOVEMENT { get; private set; }
+    public float HORIZONTAL_MOVEMENT { get; private set; }
 
     void Update()
     {
-        MoveDirection = Input.GetAxis(MoveAxisName);
-
-        RotateDirection = Input.GetAxis(RotateAxisName);
+        VERTICAL_MOVEMENT = Input.GetAxisRaw(VAxisName);
+        HORIZONTAL_MOVEMENT = Input.GetAxisRaw(HAxisName);
 
     }
 }
